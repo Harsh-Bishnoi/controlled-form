@@ -10,7 +10,7 @@ const ControlledForm = () => {
         password: "",
         confirmPassword: ""
     }
-    const [FormValue, setFormValue] = useState(initialValue);
+    const [InputValue, setInputValue] = useState(initialValue);
     return (
         <>
             <div className="flex min-h-screen items-center justify-center">
@@ -19,38 +19,38 @@ const ControlledForm = () => {
                     <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
                         <Input
                             name="firstName"
-                            value={FormValue.firstName}
+                            value={InputValue.firstName}
                             type="text"
                             placeholder="First Name"
-                            onchange={(e) => setFormValue({ ...FormValue, firstName: e.target.value })} />
+                            onchange={(e) => setInputValue({ ...InputValue, firstName: e.target.value })} />
                         <Input
                             name="lastName"
-                            value={FormValue.lastName}
+                            value={InputValue.lastName}
                             type="text"
                             placeholder="Last Name"
-                            onchange={(e) => setFormValue({ ...FormValue, lastName: e.target.value })}
+                            onchange={(e) => setInputValue({ ...InputValue, lastName: e.target.value })}
                         />
                     </div>
                     <Input
                         inputClass="sm:max-w-[816px] mx-auto flex mt-4"
                         name="email"
-                        value={FormValue.email}
+                        value={InputValue.email}
                         type="email"
                         placeholder="Email"
-                        onchange={(e) => setFormValue({ ...FormValue, email: e.target.value })} />
+                        onchange={(e) => setInputValue({ ...InputValue, email: e.target.value })} />
                     <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-4">
                         <Input
                             name="password"
-                            value={FormValue.password}
+                            value={InputValue.password}
                             type="Password"
                             placeholder="Password"
-                            onchange={(e) => setFormValue({ ...FormValue, password: e.target.value })} />
+                            onchange={(e) => setInputValue({ ...InputValue, password: e.target.value })} />
                         <Input
                             name="confirmPassword"
-                            value={FormValue.confirmPassword}
+                            value={InputValue.confirmPassword}
                             type="Password"
                             placeholder="Confirm Password"
-                            onchange={(e) => setFormValue({ ...FormValue, confirmPassword: e.target.value })}
+                            onchange={(e) => setInputValue({ ...InputValue, confirmPassword: e.target.value })}
                         />
                     </div>
                     <Button type="Submit" text="Submit" />
