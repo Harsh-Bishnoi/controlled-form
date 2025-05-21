@@ -33,7 +33,7 @@ const ControlledForm = () => {
                                 onchange={(e) => setInputValue({ ...inputValue, firstName: e.target.value })} />
                             <Input
                                 name="lastName"
-                                value={nputValue.lastName}
+                                value={inputValue.lastName}
                                 type="text"
                                 placeholder="Last Name"
                                 onchange={(e) => setInputValue({ ...inputValue, lastName: e.target.value })} />
